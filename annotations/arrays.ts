@@ -3,7 +3,13 @@ const dates = [new Date(), new Date()];
 
 const carsByMake: string[][] = [];
 
-const myCar = carMakers[0];
+// Help with inference when extracting values
+const car = carMakers[0];
+const myCar = carMakers.pop();
+
+// Prevent incompatible values
+carMakers.push('nissan');
+
 carMakers.map((car: string): string => {
   return car.toUpperCase();
 });
